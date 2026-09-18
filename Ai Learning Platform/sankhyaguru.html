@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SankhyaGuru | MoSPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async></script>
+<style>
+:root{--ink:#1c2233;--cloud:#f3f5f8;--line:#d8dee6;--muted:#5c6675;--accent:#E8792C;--accent-deep:#c85f14;--sage:#12245c;--blue:#12245c;--live:#1a7f37;--mono:"DM Mono",monospace}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cloud);color:var(--ink);font:14px/1.6 Manrope,Arial,sans-serif}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.tricolor{height:4px;background:linear-gradient(90deg,var(--accent),#fff 50%,var(--live))}.utility{height:31px;background:#eef1f5;color:#6a7280;font:10px var(--mono)}.utility .wrap{height:100%;display:flex;align-items:center}.utility span{margin-left:auto}header{background:#fff}.brand{height:90px;display:flex;justify-content:space-between;align-items:center}.ministry,.project{display:flex;gap:12px;align-items:center}.seal{font-size:26px;width:42px;text-align:center;border-right:1px solid var(--line)}.brand p{display:flex;flex-direction:column;margin:0;line-height:1.35}.brand strong{font-size:12px}.brand small{font:8px var(--mono);color:var(--muted)}.project{font-size:25px;color:var(--accent)}.project strong{font-size:20px;letter-spacing:-.07em;color:var(--sage)}.project strong b{color:var(--accent)}.nav{background:var(--blue);color:#fff}.nav .wrap{height:53px;display:flex;align-items:center;justify-content:space-between}nav{display:flex;gap:25px;height:100%;align-items:center}nav a{height:100%;display:flex;align-items:center;font-size:11px;color:#cfd6e6;border-bottom:3px solid transparent}nav a:hover{color:#fff;border-color:var(--accent)}nav a.igot-nav{color:#ffd9b3;font-weight:800}nav a.igot-nav:hover{color:#fff;border-color:var(--accent)}.auth-actions{display:flex;gap:12px;align-items:center}.login-link{font-size:11px;font-weight:800;color:#f2f2ee}.login-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:6px;text-decoration:none;font-family:sans-serif;font-weight:600;border:0}.login-btn:hover{background:var(--accent-deep)}.hero{background:radial-gradient(circle at 85% 35%,#dbe6f7,#eef2f7 34%,var(--cloud) 74%)}.hero .wrap{min-height:555px;padding:70px 0;display:grid;grid-template-columns:1.06fr .94fr;gap:7vw;align-items:center}.kicker{margin:0 0 17px;color:var(--muted);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}h1,h2{margin:0;font-size:clamp(34px,4.2vw,59px);line-height:1.12;letter-spacing:-.065em;font-weight:600}h1 i,h2 i{font-family:Georgia,serif;font-weight:400;color:var(--sage)}h1 small{display:block;font-size:.67em}.lead{max-width:540px;margin:25px 0;color:#4c5563;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;padding:11px 18px;font-size:11px;font-weight:800}.primary{background:var(--blue);color:#fff}.primary:hover{background:#0b1840}.secondary{border:1px solid #b9c1cc;background:transparent;color:#333a45}.igot-link{align-self:center;font-size:11px;font-weight:800;color:var(--accent-deep);border-bottom:1px solid var(--accent)}.safe{display:block;margin-top:18px;color:#79808c;font:9px var(--mono)}.dashboard{background:#fff;border:1px solid var(--line);box-shadow:0 22px 48px #22345512}.dashhead{padding:15px 18px;border-bottom:1px solid var(--line);font:9px var(--mono)}.dashhead span{float:right;color:var(--live);font-weight:700}.dashbody{display:flex;padding:18px;gap:10px}.radar-chart{width:58%;display:grid;place-items:center}.score{align-self:center;border-left:1px solid var(--line);padding-left:16px;flex:1}.score b{display:block;font-size:36px}.score small{font:9px var(--mono);color:var(--muted)}.score .delta-up{color:var(--live);font-weight:700}.radar-legend{list-style:none;margin:14px 0 0;padding:0;font:9px var(--mono)}.radar-legend li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-top:1px solid var(--line)}.radar-legend li:first-child{border-top:0}.radar-legend b{color:var(--accent-deep)}.path{padding:11px 18px;background:#eef2f8;display:flex;justify-content:space-between;align-items:center;font-size:10px;gap:10px}.path-link{font-weight:800;color:var(--accent-deep);white-space:nowrap}.section{padding:105px 0}.assessment{background:#e9eff7}.cols{display:grid;grid-template-columns:.8fr 1fr;gap:11vw;align-items:center}.copy{max-width:420px;color:var(--muted);line-height:1.8}.copy a{color:var(--accent-deep);font-weight:700;border-bottom:1px solid var(--accent)}.quiz{padding:26px;background:#fff;border:1px solid var(--line)}.answers{display:grid;gap:8px}.answers button{padding:11px;background:#f2f4f7;border:1px solid var(--line);text-align:left;font-size:11px}.correct{border-color:var(--live)!important;background:#eaf6ec!important}.feedback{font-size:10px;font-weight:800}.framework{background:#e3e9f2}.stat-strip{display:flex;gap:44px;margin:28px 0 0;flex-wrap:wrap}.stat-strip b{display:block;font-size:28px;color:var(--sage)}.stat-strip small{font:9px var(--mono);color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:53px}.cards article{min-height:250px;padding:20px;background:#fff;border-top:3px solid transparent}.cards article:hover{border-color:var(--accent)}.cards span{font:10px var(--mono);color:#9aa1ab}.cards>b,.cards article>b{display:block;margin:32px 0 14px;font-size:26px;color:var(--sage)}.cards h3{font-size:17px;line-height:1.3}.cards p{font-size:10px;color:var(--muted)}.stat-bar{height:4px;background:#dfe4ec;margin:16px 0 6px;overflow:hidden}.stat-bar i{display:block;height:100%;background:var(--accent);font-style:normal}.statline{font:9px var(--mono);color:var(--muted)}.cta{padding:64px 0;background:linear-gradient(180deg,#f6c284 0%,#fbe3cb 55%,#fdf7f1 100%)}.cta .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}footer{background:var(--blue);color:#fff}.foot{padding:45px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}.foot-links{display:flex;gap:20px;font-size:11px}.foot-links a{color:#cfd6e6;font-weight:700}.foot-links a:hover{color:#fff}.fine{margin:0;padding:15px 0;border-top:1px solid #ffffff2c;font:9px var(--mono);color:#9aa3b8}.auth-view{display:none;min-height:100vh;background:linear-gradient(135deg,#eef1f6,#f3f5f8 60%)}.auth-view.active{display:block}.auth-top{height:76px;padding:0 max(24px,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;background:#fff;border-top:4px solid var(--accent);border-bottom:1px solid var(--line)}.auth-brand{font-size:20px;font-weight:800;color:var(--sage)}.auth-brand small{display:block;font:8px var(--mono);color:var(--muted)}.back{font-size:11px;font-weight:800}.auth-page{min-height:calc(100vh - 76px);display:grid;place-items:center;padding:48px 24px}.auth-card{width:min(100%,430px);padding:39px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 50px #22345513}.auth-card h1{font-size:33px}.intro{color:var(--muted);margin:12px 0 27px}.google{min-height:44px;display:flex;justify-content:center}.demo-google{width:100%;border:1px solid #c8cccf;background:#fff;padding:12px;color:#252523;font:700 12px Manrope;cursor:pointer}.notice{margin:9px 0;color:#8b6a44;text-align:center;font-size:10px}.divide{display:flex;align-items:center;gap:10px;margin:25px 0;color:#8f96a1;font:9px var(--mono)}.divide:before,.divide:after{content:"";height:1px;flex:1;background:var(--line)}label{display:block;margin:0 0 16px;font-size:11px;font-weight:800}input{width:100%;margin-top:7px;padding:11px;border:1px solid var(--line);font:13px Manrope}.submit{width:100%;border:0;background:var(--blue);color:#fff;padding:12px;font:800 11px Manrope}.status{min-height:18px;text-align:center;color:var(--live);font-size:11px}.switch{text-align:center;color:var(--muted);font-size:11px}.switch a{font-weight:800;text-decoration:underline}@media(max-width:700px){.hero .wrap,.cols{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:repeat(2,1fr)}nav{display:none}.cta .wrap{display:block}.cta .btn{display:inline-block;margin-top:20px}.dashbody{flex-direction:column}.radar-chart{width:100%}.score{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:16px}}@media(max-width:480px){.cards{grid-template-columns:1fr}.auth-card{padding:29px 22px}}
+.assess-btn{background:var(--accent);color:#fff}.assess-btn:hover{background:var(--accent-deep)}
+.mcq-view{display:none;min-height:100vh;background:linear-gradient(135deg,#eef1f6,#f3f5f8 60%)}.mcq-view.active{display:block}
+.mcq-page{min-height:calc(100vh - 76px);padding:48px 24px;display:flex;justify-content:center}
+.mcq-shell{width:min(100%,760px)}
+.mcq-head{margin-bottom:26px}
+.live-skill{margin-top:22px;padding:16px;background:#fff;border:1px solid var(--line)}
+.live-skill>div:first-child{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.live-skill small{font:9px var(--mono);color:var(--muted)}
+.live-skill b{font-size:22px;color:var(--sage)}
+.progress-track{height:6px;background:#dfe4ec;overflow:hidden;margin-bottom:8px}
+.progress-track i{display:block;height:100%;background:var(--accent);width:0%;transition:width .35s}
+.mcq-card{padding:26px;background:#fff;border:1px solid var(--line)}
+.mcq-card h3{font-size:18px;line-height:1.4;margin:0 0 16px}
+.mcq-tag{display:inline-block;margin-bottom:12px;padding:3px 8px;background:#eef2f8;color:var(--sage);font:9px var(--mono);text-transform:uppercase}
+.mcq-options{display:grid;gap:9px;margin-bottom:14px}
+.mcq-options button{padding:12px;background:#f2f4f7;border:1px solid var(--line);text-align:left;font-size:12px}
+.mcq-options button.correct{border-color:var(--live)!important;background:#eaf6ec!important}
+.mcq-options button.incorrect{border-color:#c94b3f!important;background:#fbeceb!important}
+.mcq-feedback{font-size:11px;font-weight:800;margin-bottom:14px;min-height:14px}
+.mcq-next{border:0;background:var(--blue);color:#fff;padding:11px 20px;font:800 11px Manrope}
+.mcq-results{padding:26px;background:#fff;border:1px solid var(--line)}
+.mcq-results h3{font-size:20px;margin:0 0 6px}
+.result-bars{display:grid;gap:12px;margin:20px 0;padding:0}
+.result-bars li{list-style:none}
+.result-bars .rb-head{display:flex;justify-content:space-between;font:9px var(--mono);color:var(--muted);margin-bottom:5px}
+.result-actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.quiz-upload{
+  padding:22px;
+  margin-bottom:18px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+
+.quiz-upload h3{
+  margin:0 0 6px;
+  font-size:18px;
+}
+
+.quiz-upload p{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.quiz-upload input[type="file"]{
+  margin:10px 0 15px;
+  background:#f7f8fa;
+}
+
+.quiz-settings{
+  display:flex;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.quiz-settings label{
+  flex:1;
+  margin:0;
+}
+
+.quiz-settings select{
+  width:100%;
+  margin-top:7px;
+  padding:10px;
+  border:1px solid var(--line);
+  background:#fff;
+  font:12px Manrope;
+}
+
+#quizStatus{
+  min-height:18px;
+  margin:12px 0 0;
+  font-size:10px;
+  font-weight:700;
+}
+</style>
+</head>
+<body>
+
+<div id="website">
+  <div class="tricolor"></div>
+  <div class="utility"><div class="wrap">भारत सरकार | Government of India <span>A−　A+　हिंदी　♬ Screen Reader Access</span></div></div>
+
+  <header>
+    <div class="wrap brand">
+      <div class="ministry"><b class="seal">♚</b><p><strong>Ministry of Statistics & Programme Implementation</strong><small>Data Informatics & Innovation Division</small></p></div>
+      <div class="project">◉ <p><strong>Sankhya<b>Guru</b></strong><small>Official Statistics Learning Platform</small></p></div>
+    </div>
+    <div class="nav"><div class="wrap">
+      <nav><a href="#top">Home</a><a href="#framework">Competency Framework</a><a href="#assessment">AI Assessment Engine</a><a href="#assess" onclick="openMCQ()">Skill Assessment</a><a href="#impact">Dashboards</a><a class="igot-nav" href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">iGOT Karmayogi ↗</a></nav>
+      <div class="auth-actions"><a class="login-link" href="#login" onclick="openAuth('login')">Log in</a><a class="login-btn" href="#signup" onclick="openAuth('signup')">Sign up</a></div>
+    </div></div>
+  </header>
+
+  <main>
+    <section class="hero" id="top"><div class="wrap">
+      <div>
+        <p class="kicker">● Problem Statement 26101 · MoSPI — DIID</p>
+        <h1>AI-Powered Skill Intelligence <i>&</i> Continuous Assessment <small>for Official Statistics</small></h1>
+        <p class="lead">SankhyaGuru builds capability across India's statistical system with role-based skill intelligence, personalised learning pathways, and AI-assisted assessments — mapped directly onto courses from the iGOT Karmayogi platform.</p>
+        <p class="actions"><a class="btn assess-btn" href="#assess" onclick="openMCQ()">Take Skill Assessment →</a><a class="btn primary" href="#signup" onclick="openAuth('signup')">Sign up with Google</a><a class="btn secondary" href="#framework">Explore Competency Matrix ↓</a><a class="igot-link" href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">Browse resources on iGOT Karmayogi ↗</a></p>
+        <small class="safe">⌾ Designed for government users · Built with privacy by design</small>
+      </div>
+      <div class="dashboard">
+        <div class="dashhead">SANKHYAGURU INTELLIGENCE <span>● LIVE PROFILE</span></div>
+        <div class="dashbody">
+          <div class="radar-chart">
+            <svg viewBox="0 0 280 245" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skill radar across four competency domains: Statistical 82 percent, Technical 68 percent, Digital Governance 79 percent, Behavioural 75 percent">
+              <polygon points="140,50 215,125 140,200 65,125" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <polygon points="140,68.75 196.25,125 140,181.25 83.75,125" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <polygon points="140,87.5 177.5,125 140,162.5 102.5,125" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <polygon points="140,106.25 158.75,125 140,143.75 121.25,125" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <line x1="140" y1="125" x2="140" y2="50" stroke="var(--line)"/>
+              <line x1="140" y1="125" x2="215" y2="125" stroke="var(--line)"/>
+              <line x1="140" y1="125" x2="140" y2="200" stroke="var(--line)"/>
+              <line x1="140" y1="125" x2="65" y2="125" stroke="var(--line)"/>
+              <polygon points="140,63.5 191,125 140,184.3 83.8,125" fill="var(--accent)" fill-opacity="0.28" stroke="var(--accent)" stroke-width="2"/>
+              <circle cx="140" cy="63.5" r="3.5" fill="var(--accent-deep)"/>
+              <circle cx="191" cy="125" r="3.5" fill="var(--accent-deep)"/>
+              <circle cx="140" cy="184.3" r="3.5" fill="var(--accent-deep)"/>
+              <circle cx="83.8" cy="125" r="3.5" fill="var(--accent-deep)"/>
+              <text x="140" y="26" text-anchor="middle" font-family="DM Mono,monospace" font-size="8" fill="var(--muted)">STATISTICAL</text>
+              <text x="220" y="122" text-anchor="start" font-family="DM Mono,monospace" font-size="8" fill="var(--muted)">TECHNICAL</text>
+              <text x="140" y="223" text-anchor="middle" font-family="DM Mono,monospace" font-size="8" fill="var(--muted)">DIGITAL GOV.</text>
+              <text x="60" y="122" text-anchor="end" font-family="DM Mono,monospace" font-size="8" fill="var(--muted)">BEHAVIOURAL</text>
+            </svg>
+          </div>
+          <div class="score">
+            <small>Skill readiness</small>
+            <b>76%</b>
+            <small class="delta-up">▲ +8% since last assessment</small>
+            <ul class="radar-legend">
+              <li><span>Statistical</span><b>82%</b></li>
+              <li><span>Technical</span><b>68%</b></li>
+              <li><span>Digital Governance</span><b>79%</b></li>
+              <li><span>Behavioural</span><b>75%</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="path"><span>Recommended pathway <b>Data Analytics for Official Statistics</b></span><a class="path-link" href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">View on iGOT ↗</a></div>
+      </div>
+    </div></section>
+
+    <section class="section assessment" id="assessment"><div class="wrap cols">
+      <div><p class="kicker">01 / AI Assessment Engine</p><h2>Learn continuously.<br><i>Measure meaningfully.</i></h2><p class="copy">SankhyaGuru transforms approved training material into contextual, role-aligned assessments, then routes each gap it finds to the matching course on <a href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">iGOT Karmayogi</a>.</p></div>
+      <article class="quiz"><p class="kicker">AI-GENERATED PREVIEW</p><h3>In stratified random sampling, why divide a population into strata?</h3><div class="answers"><button data-answer="no">To increase sample size</button><button data-answer="yes">To improve precision by grouping similar units</button><button data-answer="no">To eliminate all sampling error</button></div><p class="feedback"></p></article>
+    </div></section>
+
+    <section class="section framework" id="framework"><div class="wrap">
+      <p class="kicker">02 / National competency framework</p>
+      <h2>A shared language<br>for <i>capability.</i></h2>
+      <p class="copy">A common competency dictionary anchors every assessment, learning recommendation, and workforce dashboard in SankhyaGuru — cross-referenced against the course catalogue on iGOT Karmayogi.</p>
+      <div class="stat-strip">
+        <div><b>142</b><small>Competencies mapped</small></div>
+        <div><b>18,400+</b><small>Officers assessed</small></div>
+        <div><b>310</b><small>iGOT courses linked</small></div>
+      </div>
+      <div class="cards">
+        <article><span>01</span><b>⌁</b><h3>Statistical<br>Competencies</h3><p>Survey design · National accounts · SDG indicators</p><div class="stat-bar"><i style="width:82%"></i></div><small class="statline">82% avg. proficiency · 42 courses on iGOT</small></article>
+        <article><span>02</span><b>⌘</b><h3>Technical<br>Competencies</h3><p>Python · R · SQL · GIS · AI / ML</p><div class="stat-bar"><i style="width:68%"></i></div><small class="statline">68% avg. proficiency · 58 courses on iGOT</small></article>
+        <article><span>03</span><b>⌾</b><h3>Digital<br>Governance</h3><p>Cybersecurity · Data privacy · DPI</p><div class="stat-bar"><i style="width:79%"></i></div><small class="statline">79% avg. proficiency · 24 courses on iGOT</small></article>
+        <article><span>04</span><b>◇</b><h3>Behavioural &<br>Managerial</h3><p>Leadership · Communication · Ethics</p><div class="stat-bar"><i style="width:75%"></i></div><small class="statline">75% avg. proficiency · 19 courses on iGOT</small></article>
+      </div>
+    </div></section>
+
+    <section class="cta" id="impact"><div class="wrap"><div><p class="kicker">Begin your capability journey</p><h2>Ready to grow<br>what matters?</h2></div><a class="btn primary" href="#login" onclick="openAuth('login')">Access SankhyaGuru →</a></div></section>
+  </main>
+
+  <footer><div class="wrap foot"><b>♚ SankhyaGuru · Ministry of Statistics & Programme Implementation</b><div class="foot-links"><a href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">iGOT Karmayogi ↗</a><a href="https://mospi.gov.in" target="_blank" rel="noopener">MoSPI ↗</a></div></div><p class="wrap fine">© 2025 SankhyaGuru. All rights reserved.</p></footer>
+</div>
+
+<section class="auth-view" id="auth-view">
+  <header class="auth-top"><div class="auth-brand">◉ SankhyaGuru<small>OFFICIAL STATISTICS LEARNING PLATFORM</small></div><a class="back" href="#top" onclick="closeAuth()">← Return to website</a></header>
+  <main class="auth-page"><section class="auth-card">
+    <p class="kicker" id="auth-kicker">Secure access</p>
+    <h1 id="auth-title">Log in to SankhyaGuru</h1>
+    <p class="intro" id="auth-intro">Continue your learning and assessment journey.</p>
+    <div class="google" id="google-button"></div>
+    <p class="notice" id="google-notice"></p>
+    <div class="divide">OR CONTINUE WITH EMAIL</div>
+    <form id="email-form">
+      <label id="name-wrap" hidden>FULL NAME<input id="name" autocomplete="name" placeholder="Your full name"></label>
+      <label>EMAIL ADDRESS<input id="email" type="email" autocomplete="email" required placeholder="name@organisation.gov.in"></label>
+      <button class="submit" id="submit-button" type="submit">LOG IN WITH EMAIL →</button>
+    </form>
+    <p class="status" id="status"></p>
+    <p class="switch" id="auth-switch">New here? <a href="#signup" onclick="openAuth('signup')">Create an account</a></p>
+  </section></main>
+</section>
+
+<section class="mcq-view" id="mcq-view">
+  <header class="auth-top"><div class="auth-brand">◉ SankhyaGuru<small>OFFICIAL STATISTICS LEARNING PLATFORM</small></div><a class="back" href="#top" onclick="closeMCQ()">← Return to website</a></header>
+  <main class="mcq-page"><div class="mcq-shell">
+    <div class="mcq-head">
+      <p class="kicker">Competency-based assessment</p>
+      <h2>Skill Assessment</h2>
+      <p class="copy">Answer questions drawn from all four competency domains. Your skill level updates after every question, and the results below map straight onto your recommended learning pathway on iGOT Karmayogi.</p>
+      <div class="live-skill">
+        <div><small>Live skill level</small><b id="liveScore">0%</b></div>
+        <div class="progress-track"><i id="progressFill"></i></div>
+        <small id="progressLabel">Question 1 of 10</small>
+      </div>
+    </div>
+    <div class="quiz-upload">
+  <h3>Generate AI Assessment</h3>
+  <p>Select a PDF containing the learning material.</p>
+
+  <input
+    type="file"
+    id="quizFile"
+    accept=".pdf,.docx,.pptx"
+  >
+
+  <div class="quiz-settings">
+    <label>
+      Questions
+      <select id="questionCount">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+    </label>
+
+    <label>
+      Difficulty
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </label>
+  </div>
+
+  <button class="mcq-next" id="generateQuizButton" onclick="startQuizGeneration()">
+    Generate AI Quiz →
+  </button>
+
+  <p id="quizStatus"></p>
+</div>
+
+<div class="mcq-body" id="mcqBody"></div>
+<div class="mcq-results" id="mcqResults" hidden></div>
+
+  </div></main>
+</section>
+
+<script>
+const GOOGLE_CLIENT_ID="PASTE_YOUR_GOOGLE_OAUTH_CLIENT_ID_HERE";
+const $=id=>document.getElementById(id);
+let currentMode="login";
+
+function openAuth(mode){
+  currentMode=mode;
+  $("website").style.display="none";
+  $("auth-view").classList.add("active");
+  const signup=mode==="signup";
+  $("auth-kicker").textContent=signup?"Begin your journey":"Secure access";
+  $("auth-title").textContent=signup?"Create your SankhyaGuru account":"Log in to SankhyaGuru";
+  $("auth-intro").textContent=signup?"Save your SankhyaGuru progress on this device.":"Continue your SankhyaGuru learning journey.";
+  $("name-wrap").hidden=!signup;
+  $("submit-button").textContent=signup?"CREATE ACCOUNT WITH EMAIL →":"LOG IN WITH EMAIL →";
+  $("auth-switch").innerHTML=signup?'Already registered? <a href="#login" onclick="openAuth(\'login\')">Log in</a>':'New here? <a href="#signup" onclick="openAuth(\'signup\')">Create an account</a>';
+  $("status").textContent="";
+  renderGoogle();
+  scrollTo(0,0);
+}
+function closeAuth(){
+  $("auth-view").classList.remove("active");
+  $("website").style.display="block";
+}
+function saveUser(user){
+  localStorage.setItem("sankhyaguru-user",JSON.stringify(user));
+  $("status").textContent=`Signed in as ${user.name||user.email}. Demo session saved in this browser.`;
+}
+function handleGoogle(response){
+  const p=JSON.parse(atob(response.credential.split(".")[1].replace(/-/g,"+").replace(/_/g,"/")));
+  saveUser({name:p.name,email:p.email,picture:p.picture,provider:"google"});
+}
+function renderGoogle(){
+  if(GOOGLE_CLIENT_ID.startsWith("PASTE_")){
+    $("google-button").innerHTML='<button class="demo-google" type="button">G&nbsp;&nbsp; Continue with Google</button>';
+    $("google-notice").textContent="Add your Google OAuth Client ID in this file to enable Google login.";
+    return;
+  }
+  if(!window.google?.accounts?.id){setTimeout(renderGoogle,150);return}
+  $("google-button").innerHTML="";
+  $("google-notice").textContent="";
+  google.accounts.id.initialize({client_id:GOOGLE_CLIENT_ID,callback:handleGoogle});
+  google.accounts.id.renderButton($("google-button"),{theme:"outline",size:"large",width:390,text:currentMode==="signup"?"signup_with":"signin_with"});
+}
+$("email-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  saveUser({name:$("name").value||$("email").value.split("@")[0],email:$("email").value,provider:"email"});
+});
+document.querySelectorAll(".answers button").forEach(b=>b.onclick=()=>{
+  const ok=b.dataset.answer==="yes";
+  document.querySelectorAll(".answers button").forEach(x=>x.disabled=true);
+  b.classList.add(ok?"correct":"incorrect");
+  if(!ok)document.querySelector('[data-answer="yes"]').classList.add("correct");
+  document.querySelector(".feedback").textContent=ok?"Correct. This is a core concept in survey methodology.":"Not quite. Review the recommended learning pathway.";
+});
+if(location.hash==="#signup")openAuth("signup");
+if(location.hash==="#login")openAuth("login");
+
+
+let generatedQuestions = [];
+
+const MCQ_QUESTIONS=[
+  {category:"Statistical",q:"What does the Consumer Price Index primarily measure?",options:["Inflation-adjusted GDP","Change in retail prices of a fixed basket of goods and services","Population growth rate","Trade deficit"],correct:1},
+  {category:"Statistical",q:"Which sampling method gives every unit in the population an equal chance of selection?",options:["Simple random sampling","Convenience sampling","Judgmental sampling","Quota sampling"],correct:0},
+  {category:"Statistical",q:"A survey's margin of error mainly reflects:",options:["Interviewer bias","Sampling variability","Data entry errors","Non-response bias"],correct:1},
+  {category:"Technical",q:"Which of these is primarily a query language for relational databases, not a statistical modelling tool?",options:["SQL","R","Python","GIS"],correct:0},
+  {category:"Technical",q:"In GIS, what does a shapefile typically store?",options:["Raster imagery only","Vector geographic features and their attributes","SQL queries","Machine learning models"],correct:1},
+  {category:"Technical",q:"Which best describes supervised machine learning?",options:["Learning patterns from unlabeled data","Learning a mapping from labelled input-output examples","Manual rule-based coding","Random data generation"],correct:1},
+  {category:"Digital Governance",q:"Under India's data protection framework, valid consent for processing personal data must be:",options:["Assumed unless refused","Free, informed and specific","Given only once by the government","Optional for public authorities"],correct:1},
+  {category:"Digital Governance",q:"A strong password policy primarily protects against:",options:["Network latency","Unauthorized account access","Software licensing costs","Data visualization errors"],correct:1},
+  {category:"Behavioural",q:"Effective leadership in a government office is best supported by:",options:["Avoiding all delegation","Clear communication and accountability","Withholding information from the team","Ignoring stakeholder feedback"],correct:1},
+  {category:"Behavioural",q:"Which best describes ethical conduct in official statistics?",options:["Adjusting figures to match expectations","Objectivity, transparency and impartiality in reporting data","Sharing confidential respondent data freely","Prioritising speed over accuracy always"],correct:1}
+
+
+
+
+];
+let mcqIndex=0,mcqScores={},mcqAnswered=0,mcqCorrect=0;
+
+
+async function generateQuizFromBackend(file, numberOfQuestions = 10, difficulty = "medium") {
+  async function startQuizGeneration() {
+  const fileInput = $("quizFile");
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert("Please select a PDF, DOCX or PPTX file first.");
+    return;
+  }
+
+  const numberOfQuestions = Number($("questionCount").value);
+  const difficulty = $("difficulty").value;
+
+  $("quizStatus").textContent = "Generating quiz... Please wait.";
+  $("generateQuizButton").disabled = true;
+
+  const questions = await generateQuizFromBackend(
+    file,
+    numberOfQuestions,
+    difficulty
+  );
+
+  $("generateQuizButton").disabled = false;
+
+  if (!questions) {
+    $("quizStatus").textContent = "Quiz generation failed.";
+    return;
+  }
+
+  if (!questions.length) {
+    $("quizStatus").textContent = "No questions were generated.";
+    return;
+  }
+
+  $("quizStatus").textContent =
+    `Generated ${questions.length} questions successfully.`;
+
+  console.log("Generated questions:", questions);
+}
+  const formData = new FormData();
+
+  formData.append("file", file);
+  formData.append("number_of_questions", numberOfQuestions);
+  formData.append("difficulty", difficulty);
+
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:8000/api/v1/quiz/generate",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.detail || "Quiz generation failed.");
+    }
+
+    generatedQuestions = data.questions;
+
+    console.log("Quiz received from backend:", generatedQuestions);
+
+    return generatedQuestions;
+
+  } catch (error) {
+    console.error("Quiz generation error:", error);
+    alert(error.message);
+    return null;
+  }
+}
+
+
+
+function openMCQ(){
+  $("website").style.display="none";
+  $("mcq-view").classList.add("active");
+  mcqIndex=0;mcqScores={};mcqAnswered=0;mcqCorrect=0;
+  $("mcqResults").hidden=true;
+  $("mcqBody").hidden=false;
+  renderQuestion();
+  updateLiveScore();
+  scrollTo(0,0);
+}
+function closeMCQ(){
+  $("mcq-view").classList.remove("active");
+  $("website").style.display="block";
+}
+function updateLiveScore(){
+  const pct=mcqAnswered?Math.round(mcqCorrect/mcqAnswered*100):0;
+  $("liveScore").textContent=pct+"%";
+  $("progressFill").style.width=(mcqIndex/MCQ_QUESTIONS.length*100)+"%";
+  $("progressLabel").textContent=`Question ${Math.min(mcqIndex+1,MCQ_QUESTIONS.length)} of ${MCQ_QUESTIONS.length}`;
+}
+function renderQuestion(){
+  const item=generatedQuestions[mcqIndex];
+  $("mcqBody").innerHTML=`<div class="mcq-card"><span class="mcq-tag">${item.category}</span><h3>${item.q}</h3><div class="mcq-options">${item.options.map((o,i)=>`<button data-i="${i}">${o}</button>`).join("")}</div><p class="mcq-feedback"></p></div>`;
+  document.querySelectorAll(".mcq-options button").forEach(btn=>btn.onclick=()=>answerMCQ(btn,item));
+}
+function answerMCQ(btn,item){
+  const i=Number(btn.dataset.i);
+  const ok=i===item.correct;
+  document.querySelectorAll(".mcq-options button").forEach(b=>b.disabled=true);
+  btn.classList.add(ok?"correct":"incorrect");
+  if(!ok)document.querySelector(`.mcq-options button[data-i="${item.correct}"]`).classList.add("correct");
+  mcqAnswered++;if(ok)mcqCorrect++;
+  if(!mcqScores[item.category])mcqScores[item.category]={correct:0,total:0};
+  mcqScores[item.category].total++;
+  if(ok)mcqScores[item.category].correct++;
+  updateLiveScore();
+  document.querySelector(".mcq-feedback").textContent=ok?"Correct — this stays in your skill profile.":"Not quite — this domain will show up in your results below.";
+  const card=document.querySelector(".mcq-card");
+  const next=document.createElement("button");
+  next.className="mcq-next";
+  next.textContent=mcqIndex+1<MCQ_QUESTIONS.length?"Next question →":"See my results →";
+  next.onclick=nextMCQ;
+  card.appendChild(next);
+}
+function nextMCQ(){
+  mcqIndex++;
+  if(mcqIndex<MCQ_QUESTIONS.length){renderQuestion();updateLiveScore();}
+  else showMCQResults();
+}
+function showMCQResults(){
+  $("mcqBody").hidden=true;
+  const results=$("mcqResults");
+  results.hidden=false;
+  const overall=Math.round(mcqCorrect/MCQ_QUESTIONS.length*100);
+  const cats=Object.keys(mcqScores);
+  const weakest=cats.reduce((a,b)=>(mcqScores[a].correct/mcqScores[a].total)<(mcqScores[b].correct/mcqScores[b].total)?a:b,cats[0]);
+  results.innerHTML=`<h3>Assessment complete</h3><p class="copy">Overall skill level: <b style="color:var(--sage)">${overall}%</b>. Priority domain for upskilling: <b style="color:var(--accent-deep)">${weakest}</b>.</p><ul class="result-bars">${cats.map(c=>{const s=mcqScores[c];const pct=Math.round(s.correct/s.total*100);return `<li><div class="rb-head"><span>${c}</span><span>${pct}%</span></div><div class="stat-bar"><i style="width:${pct}%"></i></div></li>`;}).join("")}</ul><div class="result-actions"><a class="btn primary" href="https://igotkarmayogi.gov.in" target="_blank" rel="noopener">View recommended courses on iGOT ↗</a><button class="btn secondary" onclick="openMCQ()">Retake assessment</button></div>`;
+}
+if(location.hash==="#assess")openMCQ();
+</script>
+</body>
+</html>
